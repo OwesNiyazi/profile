@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owes Niyazi - Frontend Developer & UI Expert</title>
+    <meta
+      name="description"
+      content="Owes Niyazi - Frontend Developer specializing in creating user-friendly, responsive websites with modern technologies"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxEN_2qt7_RS181dAPztF_PZ_aph8g7NdBBw&s"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+        </svg>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+              <span class="logo-text"
+                >Owes<span class="highlight">Niyazi</span></span
+              >
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-content">
+              <h5 class="subtitle">Welcome to my portfolio</h5>
+              <h1 class="title">
+                Hi, I'm <span class="highlight">Owes Niyazi</span>
+              </h1>
+              <div class="typing-container">
+                <span class="static-text">I'm a </span>
+                <span class="dynamic-text" id="typing-text"></span>
+              </div>
+              <p class="description">
+                I create exceptional digital experiences with clean, efficient
+                code and user-centered design principles. Let's build something
+                amazing together.
+              </p>
+              <div class="hero-buttons">
+                <a href="#contact" class="btn primary-btn">Hire Me</a>
+                <a href="#" class="btn secondary-btn"
+                  >Download CV <i class="fas fa-download ms-2"></i
+                ></a>
+              </div>
+              <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="LinkedIn"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="GitHub"
+                  ><i class="bx bxl-github"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Gmail"
+                  ><i class="bx bxl-gmail"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Twitter"
+                  ><i class="bx bxl-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                alt="Owes Niyazi"
+                class="img-fluid"
+              />
+              <div class="experience-badge">
+                <span class="number">3+</span>
+                <span class="text">Years of Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#about">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow">
+            <span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>About <span class="highlight">Me</span></h2>
+          <p>Get to know me better</p>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+            <div class="about-image">
+              <img
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80"
+                alt="About Owes Niyazi"
+                class="img-fluid"
+              />
+              <div class="floating-card">
+                <div class="card-item">
+                  <i class="fas fa-code"></i>
+                  <h3>100+</h3>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+            <div class="about-content">
+              <h3>Frontend Developer & UI/UX Enthusiast</h3>
+              <p>
+                I'm a passionate Frontend Developer with 3+ years of experience
+                crafting beautiful, functional, and user-centered digital
+                experiences. I combine technical expertise with creative
+                problem-solving to build websites and applications that not only
+                look great but also deliver exceptional user experiences.
+              </p>
+              <p>
+                My journey in web development began with a fascination for how
+                design and technology intersect to create meaningful
+                interactions. Since then, I've dedicated myself to mastering
+                frontend technologies and staying at the forefront of industry
+                trends.
+              </p>
+
+              <div class="row about-info">
+                <div class="col-md-6">
+                  <div class="info-item">
+                    <span class="info-title">Name:</span>
+                    <span class="info-value">Owes Niyazi</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-title">Email:</span>
+                    <span class="info-value">owes.niyazi@example.com</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-title">Phone:</span>
+                    <span class="info-value">+1 234 567 8901</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-item">
+                    <span class="info-title">Location:</span>
+                    <span class="info-value">New York, USA</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-title">Availability:</span>
+                    <span class="info-value">Available for freelance</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-title">Experience:</span>
+                    <span class="info-value">3+ Years</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="btn primary-btn mt-4">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>My <span class="highlight">Skills</span></h2>
+          <p>What I bring to the table</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="skills-content">
+              <h3>Technical Expertise</h3>
+              <p>
+                I've honed my skills in various frontend technologies to deliver
+                exceptional web experiences. Here's a glimpse of my technical
+                proficiency:
+              </p>
+
+              <div class="skill-progress">
+                <div class="skill-title">
+                  <h5>HTML5 & CSS3</h5>
+                  <span>95%</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 95%"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-progress">
+                <div class="skill-title">
+                  <h5>JavaScript</h5>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 90%"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-progress">
+                <div class="skill-title">
+                  <h5>React.js</h5>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 85%"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-progress">
+                <div class="skill-title">
+                  <h5>UI/UX Design</h5>
+                  <span>80%</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 80%"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="500">
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <h4>HTML5</h4>
+                <p>Semantic markup, accessibility, SEO optimization</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <h4>CSS3</h4>
+                <p>Flexbox, Grid, Animations, Responsive design</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-js"></i>
+                </div>
+                <h4>JavaScript</h4>
+                <p>ES6+, DOM manipulation, Async programming</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h4>React</h4>
+                <p>Hooks, Context API, State management</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-sass"></i>
+                </div>
+                <h4>Sass</h4>
+                <p>Variables, Mixins, Nesting, Partials</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <h4>Git</h4>
+                <p>Version control, Collaboration, CI/CD</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-bootstrap"></i>
+                </div>
+                <h4>Bootstrap</h4>
+                <p>Responsive layouts, Components, Customization</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fab fa-figma"></i>
+                </div>
+                <h4>Figma</h4>
+                <p>UI design, Prototyping, Design systems</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>My <span class="highlight">Services</span></h2>
+          <p>What I can do for you</p>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Web Development</h3>
+              <p>
+                I build responsive, performant websites that provide excellent
+                user experiences across all devices.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Responsive Design</h3>
+              <p>
+                I create fluid layouts that adapt seamlessly to any screen size,
+                ensuring your site looks great everywhere.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>UI/UX Design</h3>
+              <p>
+                I design intuitive interfaces that balance aesthetics with
+                functionality to create engaging user experiences.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Frontend Development</h3>
+              <p>
+                I implement modern JavaScript frameworks and libraries to build
+                interactive and dynamic web applications.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <h3>Performance Optimization</h3>
+              <p>
+                I optimize websites for speed and performance, ensuring fast
+                load times and smooth interactions.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3>SEO Optimization</h3>
+              <p>
+                I implement best practices to improve your website's visibility
+                in search engines and drive organic traffic.
+              </p>
+              <a href="#" class="service-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>My <span class="highlight">Projects</span></h2>
+          <p>Some of my recent work</p>
+        </div>
+
+        <div class="project-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+          <button class="filter-btn" data-filter="app">App Development</button>
+          <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+        </div>
+
+        <div class="row project-gallery">
+          <!-- Project 1 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="web"
+            data-aos="fade-up"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1669075651746-fce63b629d18?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dWklMjB1eCUyMHByb2plY3R8ZW58MHx8MHx8fDA%3D"
+                  alt="UI Login Pages"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="./img/Screenshot 2024-12-09 124512.png"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>UI Login Pages</h4>
+                <p>
+                  Modern, responsive login interfaces with clean design and
+                  smooth animations.
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="app"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1701113010478-b16fb74e6b8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoYXQlMjBib3R8ZW58MHx8MHx8fDA%3D"
+                  alt="Chat-bot"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="./img/Screenshot 2024-12-09 142610.png"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Chat-bot Interface</h4>
+                <p>
+                  Interactive chatbot with natural language processing and
+                  responsive design.
+                </p>
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>CSS</span>
+                  <span>API Integration</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="ui"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://media.istockphoto.com/id/1731629004/photo/mobile-app-design-web-design-streaming-app-and-user-interface.webp?a=1&b=1&s=612x612&w=0&k=20&c=oLCrKg-ULI1fOpHtj4ZmaiMe70OVqyUhR26152_o_p8="
+                  alt="Landing Page"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="./img/Screenshot 2024-12-09 143325.png"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Landing Page</h4>
+                <p>
+                  High-converting landing page with modern design and optimized
+                  user flow.
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>SCSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="web"
+            data-aos="fade-up"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://media.istockphoto.com/id/2162237289/photo/3d-rendered-online-shopping-icons.webp?a=1&b=1&s=612x612&w=0&k=20&c=-cUz-sR47lCjs2nTZaaXSiC7GBkuSqCzO07QNh5s8Pc="
+                  alt="Shopping Cart List"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="./img/Screenshot 2024-12-09 152846.png"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Shopping Cart List</h4>
+                <p>
+                  Interactive e-commerce cart with real-time updates and smooth
+                  animations.
+                </p>
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Redux</span>
+                  <span>CSS</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="app"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1720551256983-445d23d516b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Task Manager App"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://via.placeholder.com/600x400/6c5ce7/ffffff?text=Task+Manager+App"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Task Manager App</h4>
+                <p>
+                  Productivity application with drag-and-drop interface and data
+                  persistence.
+                </p>
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Firebase</span>
+                  <span>Material UI</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="ui"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/file-1720553225363-8064931ae669image?w=416&dpr=2&auto=format&fit=crop&q=60"
+                  alt="Portfolio Design"
+                  class="img-fluid"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://via.placeholder.com/600x400/00b894/ffffff?text=Portfolio+Design"
+                      class="project-link"
+                      data-gallery="project-gallery"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="project-link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Portfolio Design</h4>
+                <p>
+                  Modern portfolio website with smooth animations and intuitive
+                  navigation.
+                </p>
+                <div class="project-tags">
+                  <span>Figma</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                </div>
+                <a href="#" class="btn primary-btn btn-sm mt-3">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="#" class="btn primary-btn">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding bg-light">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Latest <span class="highlight">Articles</span></h2>
+          <p>Insights and thoughts on web development</p>
+        </div>
+
+        <div class="row">
+          <!-- Blog Post 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="https://via.placeholder.com/600x400/ff7675/ffffff?text=Modern+Web+Design"
+                  alt="Blog Post"
+                  class="img-fluid"
+                />
+                <div class="blog-date">
+                  <span class="day">15</span>
+                  <span class="month">Jun</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-category">Web Design</div>
+                <h3 class="blog-title">Modern Web Design Trends in 2024</h3>
+                <p class="blog-excerpt">
+                  Exploring the latest design trends that are shaping the web
+                  development landscape in 2024.
+                </p>
+                <a href="#" class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Author"
+                    class="author-avatar"
+                  />
+                  <span>Owes Niyazi</span>
+                </div>
+                <div class="blog-stats">
+                  <span><i class="far fa-eye"></i> 245</span>
+                  <span><i class="far fa-comment"></i> 12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="https://via.placeholder.com/600x400/74b9ff/ffffff?text=JavaScript+Tips"
+                  alt="Blog Post"
+                  class="img-fluid"
+                />
+                <div class="blog-date">
+                  <span class="day">03</span>
+                  <span class="month">May</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-category">JavaScript</div>
+                <h3 class="blog-title">
+                  10 JavaScript Tips to Improve Your Code
+                </h3>
+                <p class="blog-excerpt">
+                  Essential JavaScript techniques that will help you write
+                  cleaner, more efficient code.
+                </p>
+                <a href="#" class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Author"
+                    class="author-avatar"
+                  />
+                  <span>Owes Niyazi</span>
+                </div>
+                <div class="blog-stats">
+                  <span><i class="far fa-eye"></i> 312</span>
+                  <span><i class="far fa-comment"></i> 24</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="https://via.placeholder.com/600x400/55efc4/ffffff?text=Responsive+Design"
+                  alt="Blog Post"
+                  class="img-fluid"
+                />
+                <div class="blog-date">
+                  <span class="day">22</span>
+                  <span class="month">Apr</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-category">Responsive Design</div>
+                <h3 class="blog-title">Mastering Mobile-First Development</h3>
+                <p class="blog-excerpt">
+                  A comprehensive guide to implementing effective mobile-first
+                  strategies in your projects.
+                </p>
+                <a href="#" class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Author"
+                    class="author-avatar"
+                  />
+                  <span>Owes Niyazi</span>
+                </div>
+                <div class="blog-stats">
+                  <span><i class="far fa-eye"></i> 189</span>
+                  <span><i class="far fa-comment"></i> 8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="#" class="btn primary-btn">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Get in <span class="highlight">Touch</span></h2>
+          <p>Let's work together on your next project</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+            <div class="contact-info">
+              <h3>Let's connect</h3>
+              <p>
+                I'm always open to discussing new projects, creative ideas or
+                opportunities to be part of your vision.
+              </p>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Location</h4>
+                  <p>New York City, NY, USA</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>owes.niyazi@example.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Phone</h4>
+                  <p>+1 234 567 8901</p>
+                </div>
+              </div>
+
+              <div class="social-icons mt-4">
+                <a href="#" class="social-icon" aria-label="LinkedIn"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="GitHub"
+                  ><i class="bx bxl-github"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Gmail"
+                  ><i class="bx bxl-gmail"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Twitter"
+                  ><i class="bx bxl-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+            <div class="contact-form-container">
+              <form id="contact-form" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Your Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="user_name"
+                        class="form-control"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Your Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="user_email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn primary-btn w-100">
+                  Send Message
+                </button>
+              </form>
+              <div id="status" class="mt-3 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-info">
+              <h3 class="footer-logo">
+                Owes<span class="highlight">Niyazi</span>
+              </h3>
+              <p>
+                A passionate Frontend Developer focused on creating intuitive
+                and engaging web experiences.
+              </p>
+              <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="LinkedIn"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="GitHub"
+                  ><i class="bx bxl-github"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Gmail"
+                  ><i class="bx bxl-gmail"></i
+                ></a>
+                <a href="#" class="social-icon" aria-label="Twitter"
+                  ><i class="bx bxl-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Responsive Design</a></li>
+                <li><a href="#">Frontend Development</a></li>
+                <li><a href="#">Performance Optimization</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="footer-newsletter">
+              <h4>Subscribe to my Newsletter</h4>
+              <p>Stay updated with my latest projects and articles</p>
+              <form action="#" method="post">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; <span id="current-year"></span> <strong>Owes Niyazi</strong>.
+            All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed with <i class="fas fa-heart"></i> by
+            <a href="#">Owes Niyazi</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
