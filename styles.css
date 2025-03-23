@@ -343,6 +343,7 @@
   .social-icons {
     display: flex;
     gap: 15px;
+    /* background-color: var(--danger-color); */
   }
   
   .social-icon {
@@ -368,6 +369,7 @@
   # Hero Section
   --------------------------------------------------------------*/
   .hero-section {
+    margin-top: 10%;
     height: 100vh;
     background-color: var(--background-color);
     position: relative;
