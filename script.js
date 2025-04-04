@@ -176,36 +176,34 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   
-    // Theme toggle functionality
-    const themeToggle = document.querySelector(".theme-toggle");
-    const htmlElement = document.documentElement;
+   // Theme toggle functionality
+const themeToggle = document.querySelector(".theme-toggle");
+const htmlElement = document.documentElement;
+
+// Set initial theme to dark if no saved preference exists
+const savedTheme = localStorage.getItem("theme") || "dark";
+htmlElement.setAttribute("data-theme", savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener("click", function () {
+  const currentTheme = htmlElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
   
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      htmlElement.setAttribute("data-theme", savedTheme);
-      updateThemeIcon(savedTheme);
-    }
+  htmlElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
   
-    themeToggle.addEventListener("click", function () {
-      const currentTheme = htmlElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-  
-      htmlElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-  
-      updateThemeIcon(newTheme);
-    });
-  
-    function updateThemeIcon(theme) {
-      const themeIcon = themeToggle.querySelector("i");
-      if (theme === "dark") {
-        themeIcon.className = "fas fa-sun"; // Change to sun icon for dark mode
-      } else {
-        themeIcon.className = "fas fa-moon"; // Change to moon icon for light mode
-      }
-    }
-  
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  const themeIcon = themeToggle.querySelector("i");
+  if (theme === "dark") {
+    themeIcon.className = "fas fa-sun"; // Sun icon for dark mode (to switch to light)
+  } else {
+    themeIcon.className = "fas fa-moon"; // Moon icon for light mode (to switch to dark)
+  }
+}
+
     // Contact form submission with EmailJS
     const contactForm = document.getElementById("contact-form");
     const statusMessage = document.getElementById("status");
