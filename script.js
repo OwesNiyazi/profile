@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
       mirror: false,
     });
   
+    // Set animation delay for nav items
+    const navItems = document.querySelectorAll('.navbar-nav .nav-item');
+    navItems.forEach((item, index) => {
+      item.style.setProperty('--item-count', index);
+    });
+  
     // Typed.js for dynamic text animation
     const typed = new Typed(".dynamic-text", {
       strings: [
@@ -88,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links and improved mobile menu handling
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -98,15 +104,27 @@ document.addEventListener("DOMContentLoaded", function () {
   
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+          
           window.scrollTo({
-            top: targetElement.offsetTop - 80,
+            top: targetPosition,
             behavior: "smooth",
           });
   
           // Close mobile menu if open
           const navbarCollapse = document.querySelector(".navbar-collapse");
+          const navbarToggler = document.querySelector(".navbar-toggler");
           if (navbarCollapse.classList.contains("show")) {
-            document.querySelector(".navbar-toggler").click();
+            // Use Bootstrap's collapse method to properly close the menu
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+            // Reset aria attributes and toggle button appearance
+            navbarToggler.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove("navbar-open");
+            document.body.style.overflow = "";
           }
         }
       });
@@ -319,13 +337,23 @@ function updateThemeIcon(theme) {
       observer.observe(counter);
     });
   
-    // Handle mobile navigation
+    // Improved mobile menu toggle animation
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
   
     if (navbarToggler) {
       navbarToggler.addEventListener("click", function () {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle navbar-open class on body
         document.body.classList.toggle("navbar-open");
+        
+        // Prevent body scrolling when menu is open
+        if (!isExpanded) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
       });
     }
   
@@ -334,9 +362,29 @@ function updateThemeIcon(theme) {
       if (
         navbarCollapse &&
         navbarCollapse.classList.contains("show") &&
-        !e.target.closest(".navbar")
+        !e.target.closest(".navbar") &&
+        !e.target.closest(".navbar-toggler")
       ) {
-        document.querySelector(".navbar-toggler").click();
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide();
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove("navbar-open");
+        document.body.style.overflow = "";
+      }
+    });
+  
+    // Listen for escape key to close the navbar
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navbarCollapse && navbarCollapse.classList.contains("show")) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide();
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove("navbar-open");
+        document.body.style.overflow = "";
       }
     });
   
